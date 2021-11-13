@@ -10,6 +10,6 @@ public class ControladorToken {
 
 	@GetMapping
 	public String test() {
-		return "El número ingresado es: " + 2;
+		return "El nÃºmero ingresado es: " + 2;
 	}
 }
