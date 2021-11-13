@@ -38,7 +38,13 @@ public class RepositorioTokenHttp implements RepositorioToken {
                             value = "true")
     	    })
     public TokenResponse obtenerToken(String numero) {
+    	
     	String url = host + ":" + port + "/?number=" + numero;
+    	
+    	if(!url.startsWith("http")) {
+    		url = "http://".concat(url);
+    	}
+    	
     	ResponseEntity<TokenResponse> respuesta =  restTemplate.getForEntity(url,
     			TokenResponse.class);
     	
