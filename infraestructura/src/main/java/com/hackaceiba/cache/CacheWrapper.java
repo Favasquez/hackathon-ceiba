@@ -1,9 +1,13 @@
 package com.hackaceiba.cache;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+
+@Component
 public class CacheWrapper implements Cache {
 
     Map<String, CacheEntry> map;
@@ -19,6 +23,10 @@ public class CacheWrapper implements Cache {
 
     @Override
     public Object get(String key) {
+
+        if (key.trim().isEmpty())
+            return null;
+
         CacheEntry cacheEntry = map.get(key);
 
         if(cacheEntry == null)

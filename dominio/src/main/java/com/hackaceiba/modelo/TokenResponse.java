@@ -17,4 +17,8 @@ public class TokenResponse {
     public String date;
     public String validitySeconds;
     public String token;
+
+    public int calculateMillisValidity() {
+        return Integer.valueOf(this.validitySeconds) * 1000;
+    }
 }
