@@ -12,6 +12,9 @@ dependencies {
     compileOnly project.ext.lombok
     annotationProcessor project.ext.lombok
 
+    testImplementation project.ext.junit4
+    testImplementation project.ext.mockito
+
     implementation project(':dominio')
     implementation project(':aplicacion')
 
