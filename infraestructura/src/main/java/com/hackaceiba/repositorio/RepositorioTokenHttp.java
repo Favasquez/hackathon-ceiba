@@ -53,7 +53,7 @@ public class RepositorioTokenHttp implements RepositorioToken {
     
     public TokenResponse obtenerTokenFallback(String numero) {
     	try {
-			Thread.sleep(1500);
+			Thread.sleep(500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
