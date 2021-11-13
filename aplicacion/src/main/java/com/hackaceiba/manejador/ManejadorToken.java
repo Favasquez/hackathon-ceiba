@@ -15,7 +15,15 @@ public class ManejadorToken {
     }
 
     public TokenResponse obtenerToken(String numero){
-        return repositorioToken.obtenerToken(numero);
+    	TokenResponse token = null;
+    	
+    	try {
+    		token = repositorioToken.obtenerToken(numero);
+    	}catch(RuntimeException e) {
+    		return new TokenResponse();
+    	}
+    	
+    	return token; 
     }
 
 }

@@ -26,6 +26,8 @@ allprojects {
     project.ext.springbootundertow = [
         "org.springframework.boot:spring-boot-starter-undertow:${springBootVersion}"
     ]
+    project.ext.circuitbreaker = ["org.springframework.cloud:spring-cloud-starter-netflix-hystrix:${springBootVersion}"]
+    
     project.ext.inject = ["javax.inject:javax.inject:1"]
     project.ext.apachecommons = [
             "commons-io:commons-io:2.6",
@@ -67,4 +69,10 @@ tasks.withType(JavaCompile) {
 
 test {
     useJUnitPlatform()
+}
+
+bootJar {
+	mainClassName = 'com.hackaceiba.Main'
+    baseName = 'hackaceiba'
+    version =  version
 }

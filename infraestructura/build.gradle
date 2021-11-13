@@ -11,6 +11,8 @@ dependencies {
 
     compileOnly project.ext.lombok
     annotationProcessor project.ext.lombok
+    
+    compile project.ext.circuitbreaker
 
     testImplementation project.ext.junit4
     testImplementation project.ext.mockito
