@@ -7,7 +7,8 @@ sourceCompatibility = '11'
 dependencies {
 
     implementation project.ext.inject
-
+    compileOnly project.ext.lombok
+    annotationProcessor project.ext.lombok
     implementation project(':dominio')
 
 }
