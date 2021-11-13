@@ -4,3 +4,7 @@ server:
   port: 5000
   servlet:
     contextPath: /
+    
+svc-api:  
+  hostname: ${SVC_API_HOSTNAME:api-7.hack.local}
+  port: ${SVC_API_PORT:80}
