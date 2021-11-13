@@ -1,0 +1,5 @@
+rootProject.name = 'hackaceiba'
+
+include ':dominio'
+include ':aplicacion'
+include ':infraestructura'

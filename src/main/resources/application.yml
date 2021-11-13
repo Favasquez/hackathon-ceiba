@@ -1,0 +1,27 @@
+version: V1.0
+
+server:
+  port: 8090
+  servlet:
+    session:
+      timeout: 21600s
+    contextPath: /api
+
+oracle:
+  spring:
+    datasource:
+      url: jdbc:oracle:thin:@${DBURL}
+      username: ${DBUSER}
+      password: ${DBPASSWORD}
+      driverClassName: oracle.jdbc.driver.OracleDriver
+      type: com.zaxxer.hikari.HikariDataSource
+
+spring:
+  datasource:
+    hikari:
+      poolName: poolHikari
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    username: ${RABBITMQ_USER:guest}
+    password: ${RABBITMQ_PASS:guest}
+    virtual-host: ${RABBITMQ_VH:/}
